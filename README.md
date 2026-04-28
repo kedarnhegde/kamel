@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Event Dashboard
 
-## Getting Started
+A real-time event analytics dashboard built with Next.js, featuring interactive charts and KPI tracking.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Real-time Event Tracking** - Monitor ride requests, completions, signups, and payments
+- **Interactive Analytics** - Visual charts showing event distribution by type
+- **KPI Cards** - Track total events, revenue, and event type breakdowns
+- **Dark Mode UI** - Modern gradient design with purple/pink accents
+- **Responsive Design** - Works seamlessly on desktop and mobile
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- Recharts (data visualization)
+- JSONPlaceholder API (mock data)
+
+## Setup
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open in browser:**
+   ```
+   http://localhost:3000
+   ```
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── api/events/route.ts    # API endpoint for event data
+│   ├── page.tsx               # Main dashboard page
+│   └── globals.css            # Global styles
+├── components/
+│   ├── EventItem.tsx          # Individual event card
+│   ├── EventsChart.tsx        # Bar chart component
+│   └── KpiCard.tsx            # KPI metric card
+└── lib/
+    ├── analytics.ts           # Analytics utility functions
+    └── types.ts               # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Dashboard Overview
+![Dashboard](./screenshots/dashboard.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Event Analytics
+![Analytics](./screenshots/analytics.png)
 
-## Learn More
+### Event List
+![Events](./screenshots/events.png)
 
-To learn more about Next.js, take a look at the following resources:
+## API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The dashboard fetches data from `/api/events` which generates mock events using the JSONPlaceholder API for user data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Event Types:**
+- `ride_requested`
+- `ride_completed`
+- `user_signup`
+- `payment_success`
 
-## Deploy on Vercel
+## Build for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
