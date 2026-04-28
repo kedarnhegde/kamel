@@ -55,13 +55,16 @@ src/
 ## Screenshots
 
 ### Dashboard Overview
-![Dashboard](./screenshots/dashboard.png)
+<img width="1470" height="880" alt="Screenshot 2026-04-28 at 13 19 18" src="https://github.com/user-attachments/assets/2677ed99-f5ba-4453-8157-4ed981deb647" />
 
 ### Event Analytics
-![Analytics](./screenshots/analytics.png)
+<img width="1465" height="680" alt="Screenshot 2026-04-28 at 13 19 52" src="https://github.com/user-attachments/assets/b9635c42-75ad-4635-8e2d-1646535d9846" />
+
 
 ### Event List
-![Events](./screenshots/events.png)
+<img width="1470" height="799" alt="Screenshot 2026-04-28 at 13 20 01" src="https://github.com/user-attachments/assets/cf7e0ba2-8b82-4430-9e4e-9b2cd51a2d20" />
+
+
 
 ## API
 
